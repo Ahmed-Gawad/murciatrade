@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murcia for General Trade & Supplies</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar .nav-links li {
+            display: inline;
+        }
+
+        .navbar .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar .nav-links li a:hover {
+            background-color: #555;
+            border-radius: 4px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            background: url('updated-truck-background.gif') no-repeat center center/cover;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero-content {
+            z-index: 1;
+            animation: slideInFromLeft 1.5s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            animation: fadeInUp 2.5s ease-in-out;
+        }
+
+        .hero .cta-btn {
+            text-decoration: none;
+            background-color: #ff5722;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 18px;
+            margin-top: 20px;
+            display: inline-block;
+            animation: bounce 3s infinite;
+        }
+
+        .hero .cta-btn:hover {
+            background-color: #e64a19;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+        }
+
+        .contact p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .contact-info strong {
+            font-weight: bold;
+        }
+
+        .contact-info .phone-link, .contact-info a {
+            color: #ff5722;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info .phone-link:hover, .contact-info a:hover {
+            color: #e64a19;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInFromLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Murcia for General Trade & Supplies</h1>
+            <p>Specialists in packing, export, and commercial agencies.</p>
+            <a href="#services" class="cta-btn">Explore Services</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Please find our contact information below:</p>
+        <div class="contact-info">
+            <p><strong>Phone:</strong> 
+                <a href="tel:00201000021174" class="phone-link">00201000021174</a>, 
+                <a href="tel:00201000021182" class="phone-link">00201000021182</a>
+            </p>
+            <p><strong>Email:</strong> 
+                <a href="mailto:elsaeda712@gmail.com">elsaeda712@gmail.com</a>, 
+                <a href="mailto:a.2002@gmail.com">a.2002@gmail.com</a>
+            </p>
+            <p><strong>Address:</strong> Smoha, Alexandria</p>
+        </div>
+    </section>
+</body>
+</html>

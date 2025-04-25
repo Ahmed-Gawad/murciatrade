@@ -10,7 +10,6 @@
             margin: 0;
             font-family: 'Roboto', sans-serif;
             overflow-x: hidden;
-            background: url('murcia-background.jpg') no-repeat center center/cover;
             color: #fff;
         }
 
@@ -22,10 +21,14 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .navbar img {
             height: 50px;
+            animation: spin 100s linear infinite; /* زيادة مدة الدوران إلى 100 ثانية */
         }
 
         .nav-links {
@@ -60,7 +63,21 @@
             align-items: center;
             height: 100vh;
             text-align: center;
-            background: rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('murcia-background.jpg') no-repeat center center/cover;
+            filter: blur(8px) brightness(0.5);
+            animation: backgroundMove 20s infinite linear;
+            z-index: -1;
         }
 
         .hero h1 {
@@ -92,15 +109,6 @@
         }
 
         /* تأثيرات الحركة */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -121,6 +129,24 @@
             }
             60% {
                 transform: translateY(-5px);
+            }
+        }
+
+        @keyframes backgroundMove {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 100% 0;
+            }
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
             }
         }
     </style>

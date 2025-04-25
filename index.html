@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Murcia for General Trade & Supplies</title>
     <style>
+        /* إعدادات عامة */
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
@@ -13,6 +14,7 @@
             color: #fff;
         }
 
+        /* شريط التنقل */
         .navbar {
             background-color: rgba(0, 0, 0, 0.8);
             color: white;
@@ -50,6 +52,7 @@
             border-radius: 4px;
         }
 
+        /* القسم الرئيسي */
         .hero {
             display: flex;
             flex-direction: column;
@@ -72,12 +75,6 @@
             animation: fadeInUp 2.5s ease-in-out;
         }
 
-        .hero img {
-            width: 300px;
-            margin-bottom: 20px;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
         .hero .cta-btn {
             text-decoration: none;
             background-color: #ff5722;
@@ -94,6 +91,7 @@
             background-color: #e64a19;
         }
 
+        /* تأثيرات الحركة */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -128,6 +126,7 @@
     </style>
 </head>
 <body>
+    <!-- شريط التنقل -->
     <header class="navbar">
         <img src="logo.png" alt="Murcia Logo">
         <ul class="nav-links">
@@ -138,8 +137,8 @@
         </ul>
     </header>
 
+    <!-- القسم الرئيسي -->
     <section class="hero">
-        <img src="logo.png" alt="Murcia Logo">
         <h1>Murcia for General Trade & Supplies</h1>
         <p>Your trusted partner for packing, exporting, and commercial agencies.</p>
         <a href="#services" class="cta-btn">Explore Services</a>
